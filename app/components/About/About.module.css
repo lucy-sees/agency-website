@@ -1,0 +1,15 @@
+/* About.module.css */
+.about {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.about h2 {
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 20px;
+  color: #333;
+}

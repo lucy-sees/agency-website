@@ -1,0 +1,39 @@
+/* Hero.module.css */
+.hero {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ctaButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #c82333;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #dc3545;
+  color: white;
+}

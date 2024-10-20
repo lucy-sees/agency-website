@@ -1,0 +1,30 @@
+/* Testimonials.module.css */
+.testimonials {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonialCard {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.quote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: bold;
+  color: #dc3545;
+}
