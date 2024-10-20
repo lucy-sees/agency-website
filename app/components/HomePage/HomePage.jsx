@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 import Hero from '../Hero/Hero'
 import Services from '../Services/Services'
 import RecentProjects from '../RecentProjects/RecentProjects'
-import AboutPage from '../About/About'
-import Testimonials from '../Testimonials/Testimonials'
-import CallToAction from '../CallToAction/CallToAction'
+import AboutPage from '../AboutPage/AboutPage'
+// import Testimonials from '../Testimonials/Testimonials'
+// import CallToAction from '../CallToAction/CallToAction'
 import styles from './HomePage.module.css';
 
 export const metadata = {
@@ -39,8 +39,8 @@ export default function Home() {
             <RecentProjects />
             <AboutPage />
             <Services />
-            <Testimonials />
-            <CallToAction />
+            {/* <Testimonials />
+            <CallToAction /> */}
           </motion.div>
         </main>
 
