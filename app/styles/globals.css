@@ -1,0 +1,16 @@
+/* styles/globals.css */
+:root {
+  --color-background: #0a0a1f;
+  --color-primary: #00ffff;
+  --color-secondary: #ff00ff;
+  --color-accent: #ffff00;
+  --color-text: #ffffff;
+  --font-primary: "Space Grotesk", sans-serif;
+  --font-secondary: "Orbitron", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+}
