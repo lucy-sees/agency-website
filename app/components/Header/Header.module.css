@@ -1,6 +1,6 @@
 /* Header.module.css */
 .navbar {
-  position: relative;
+  position: sticky;
   width: 85%;
   margin: 1rem auto; /* Center the navbar horizontally */
   padding: 0.5rem 1.5rem;
@@ -40,7 +40,8 @@
 
 .navLink {
   color: var(--color-text) !important;
-  margin: 0 0.5rem;
+  font-weight: 500;
+  margin: 0 0.6rem;
   position: relative;
   overflow: hidden;
   transition: color 0.3s ease;

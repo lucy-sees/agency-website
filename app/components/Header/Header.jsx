@@ -42,7 +42,7 @@ export default function Header() {
               <Nav.Link 
                 key={item} 
                 href={`#${item.toLowerCase().replace(' ', '-')}`} 
-                className={styles.navLink}
+                className={`${styles.navLink} px-3`}
               >
                 <motion.div
                   whileHover={{ scale: 1.1 }}
