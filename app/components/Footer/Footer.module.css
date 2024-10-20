@@ -1,18 +1,66 @@
 /* Footer.module.css */
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 60px 0 30px;
+  background: linear-gradient(to right, rgba(10, 10, 31, 0.8), rgba(26, 26, 63, 0.8));
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 4rem 0 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer h3 {
-  color: #dc3545;
-  margin-bottom: 20px;
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, #00ffff, #ff00ff);
 }
 
-.footer h4 {
-  color: #dc3545;
-  margin-bottom: 15px;
+.footerTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footerSubtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.footerText {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
 .footerLinks {
@@ -21,26 +69,106 @@
 }
 
 .footerLinks li {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .footerLinks a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footerLinks a:hover {
-  color: #dc3545;
+  color: #00ffff;
 }
 
-.socialIcons {
-  margin-top: 20px;
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formInput {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.submitButton {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.contactInfo {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.contactInfo li svg {
+  margin-right: 0.5rem;
+  color: #00ffff;
+}
+
+.mapSection {
+  margin-top: 3rem;
+}
+
+.mapContainer {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
 }
 
 .copyright {
-  margin-top: 30px;
+  margin-top: 3rem;
   text-align: center;
-  border-top: 1px solid #444;
-  padding-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1rem;
+  }
+
+  .footerTitle {
+    font-size: 2rem;
+  }
+
+  .footerSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .newsletterForm {
+    margin-top: 2rem;
+  }
+
+  .mapSection {
+    margin-top: 2rem;
+  }
 }
