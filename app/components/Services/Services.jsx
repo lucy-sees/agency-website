@@ -1,22 +1,23 @@
 "use client";
 import { Container, Card, Row, Col } from 'react-bootstrap';
+import { FaPaintBrush, FaFileAlt, FaLaptopCode, FaBullhorn, FaSearch, FaCopy, FaVideo, FaPenFancy, FaChartLine } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './Services.module.css';
 
 export default function  Services() {
   const services = [
-    { title: 'Graphic Design', icon: '/icons/graphic-design.svg', description: 'We live in a visual world. With our graphic design services, we can help you communicate your brand’s message in a visually appealing way. We can design anything from social media graphics, to brochures, business cards, and more. With our designs, your brand will stand out from the crowd.' },
-    { title: 'Poster Design', icon: '/icons/poster-design.svg', description: 'Whether you need a poster for a special event, or to promote a new product or service, we’ve got you covered. Our team can create attention-grabbing posters that will get your message across.' },
-    { title: 'Company Profile Design', icon: '/icon/company-profile-design.svg', description: 'Whether you need a poster for a special event, or to promote a new product or service, we’ve got you covered. Our team can create attention-grabbing posters that will get your message across.' },
-    { title: 'Web Design', icon: '/icons/web-design.svg', description: 'In the digital age, a website is a must-have for any business. Our team will design a website that is not only visually appealing, but also user-friendly and optimized for search engines.' },
-    { title: 'Logo Design', icon: '/icons/logo-design.svg', description: 'Your logo is the face of your brand. It’s what people first see when they come across your business. Our team will work with you to create a logo that is not only visually appealing, but also embodies the spirit of your brand.' },
-    { title: 'Brand identity design', icon: '/icons/brand-identity.svg', description: 'Your brand is more than just a logo. It’s the overall image and identity of your business. Our team can help you develop a strong brand identity that aligns with your business goals and resonates with your target audience.' },
-    { title: 'Digital Marketing', icon: '/icons/digital-marketing.svg', description: 'In today’s digital world, online marketing is essential. We can help you develop and implement a digital marketing strategy that drives traffic to your website, increases brand awareness, and generates leads.' },
-    { title: 'SEO Services', icon: '/icons/seo-services.svg', description: 'Search engine optimization (SEO) is the process of improving your website’s visibility in search engine results. Our team can help you optimize your website for search engines, so you can attract more organic traffic and reach a larger audience.' },
-    { title: 'Copywriting services', icon: '/icons/copywriting-services.svg', description: 'Good copy can make or break your marketing efforts. Our team of skilled copywriters can craft compelling copy that engages your audience, drives action, and sells your products or services' },
-    { title: 'Video editing services', icon: '/icons/video-editing-services.svg', description: 'With video content becoming increasingly popular, our video editing services can help you create engaging videos that captivate your audience' },
-    { title: 'Blog writing services for websites', icon: '/icons/blog-writing-services.svg', description: 'A blog can be a powerful tool for driving traffic to your website and establishing your brand as a thought leader in your industry. Our team can create engaging and informative blog posts that your audience will love.' }
+    { title: 'Graphic Design', icon: <FaPaintBrush />, description: 'We live in a visual world. With our graphic design services, we can help you communicate your brand’s message in a visually appealing way. We can design anything from social media graphics to brochures, business cards, and more. With our designs, your brand will stand out from the crowd.' },
+    { title: 'Poster Design', icon: <FaFileAlt />, description: 'Whether you need a poster for a special event, or to promote a new product or service, we’ve got you covered. Our team can create attention-grabbing posters that will get your message across.' },
+    { title: 'Graphic Design', icon: <FaPaintBrush />, description: 'We live in a visual world. With our graphic design services, we can help you communicate your brand’s message in a visually appealing way. We can design anything from social media graphics to brochures, business cards, and more. With our designs, your brand will stand out from the crowd.' },
+    { title: 'Poster Design', icon: <FaFileAlt />, description: 'Whether you need a poster for a special event, or to promote a new product or service, we’ve got you covered. Our team can create attention-grabbing posters that will get your message across.' },
+    { title: 'Web Design', icon: <FaLaptopCode />, description: 'In the digital age, a website is a must-have for any business. Our team will design a website that is not only visually appealing, but also user-friendly and optimized for search engines.' },
+    { title: 'Digital Marketing', icon: <FaBullhorn />, description: 'In today’s digital world, online marketing is essential. We can help you develop and implement a digital marketing strategy that drives traffic to your website, increases brand awareness, and generates leads.' },
+    { title: 'SEO Services', icon: <FaSearch />, description: 'Search engine optimization (SEO) is the process of improving your website’s visibility in search engine results. Our team can help you optimize your website for search engines, so you can attract more organic traffic and reach a larger audience.' },
+    { title: 'Copywriting Services', icon: <FaCopy />, description: 'Good copy can make or break your marketing efforts. Our team of skilled copywriters can craft compelling copy that engages your audience, drives action, and sells your products or services.' },
+    { title: 'Video Editing Services', icon: <FaVideo />, description: 'With video content becoming increasingly popular, our video editing services can help you create engaging videos that captivate your audience.' },
+    { title: 'Blog Writing Services', icon: <FaPenFancy />, description: 'A blog can be a powerful tool for driving traffic to your website and establishing your brand as a thought leader in your industry. Our team can create engaging and informative blog posts that your audience will love.' },
+    { title: 'Brand Identity Design', icon: <FaChartLine />, description: 'Your brand is more than just a logo. It’s the overall image and identity of your business. Our team can help you develop a strong brand identity that aligns with your business goals and resonates with your target audience.' },
   ];
 
   return (
