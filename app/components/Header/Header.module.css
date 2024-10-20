@@ -97,13 +97,69 @@
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
+/* Hamburger icon styling for small screens */
+.hamburgerIcon {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.navCollapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.showMenu {
+  display: block !important;
+}
+
+/* Responsive Design for smaller screens */
 @media (max-width: 991px) {
   .navbar {
     border-radius: 20px;
   }
 
-  .navLink,
+  .navCollapse {
+    display: none;
+    flex-direction: column;
+    background: rgba(157, 157, 255, 0.8);
+    padding: 1rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+  }
+
+  .hamburgerIcon {
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column; /* Set flex direction to column */
+    gap: 1rem;
+    align-items: center; /* Center the links */
+  }
+
+  .navLink, 
   .talkToUsButton {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .logo {
+    margin-right: auto;
+    margin-left: 1rem;
   }
 }
