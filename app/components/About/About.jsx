@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "./About.module.css";
 
 const About = () => {
@@ -27,11 +29,12 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <motion.img
+              <Image
                 src="/images/founder.png"
                 alt="Elvis Warutumo"
-                layout="fill"
-                objectFit="cover"
+                layout="responsive"
+                width={100}
+                height={400}
                 className={styles.founderImage}
               />
               <div className={styles.founderInfo}>
@@ -48,29 +51,31 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-                <p>
-                  Founded in 2019 by Elvis Warutumo, our mission is to empower
-                  Micro, Small, and Medium Enterprises (MSMEs) by providing
-                  affordable, computer-aided design services. From graphic
-                  design to web development, we’ve got you covered.
-                </p>
-                <p>
-                  Over the years, we’ve expanded our services to include logo
-                  and brand identity design, digital marketing, and a variety of
-                  website designs including ecommerce, personal, business,
-                  institution, and portfolio websites.
-                </p>
-                <p>
-                  We’re not just designers, we’re consultants too. We provide
-                  digital marketing services like Search Engine Optimization,
-                  Search Engine Marketing, Social Media Management, Content
-                  Creation, website strategy, and SEO writing.
-                </p>
+              <p>
+                Founded in 2019 by Elvis Warutumo, our mission is to empower
+                Micro, Small, and Medium Enterprises (MSMEs) by providing
+                affordable, computer-aided design services. From graphic
+                design to web development, we’ve got you covered.
+              </p>
+              <p>
+                Over the years, we’ve expanded our services to include logo
+                and brand identity design, digital marketing, and a variety of
+                website designs including ecommerce, personal, business,
+                institution, and portfolio websites.
+              </p>
+              <p>
+                We’re not just designers, we’re consultants too. We provide
+                digital marketing services like Search Engine Optimization,
+                Search Engine Marketing, Social Media Management, Content
+                Creation, website strategy, and SEO writing.
+              </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className={styles.learnMoreBtn}>Learn More</Button>
+                <Button className={styles.learnMoreBtn}>
+                  Learn More <FontAwesomeIcon icon={faArrowRight} className={styles.arrowIcon} />
+                </Button>
               </motion.div>
             </motion.div>
           </Col>

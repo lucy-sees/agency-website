@@ -2,8 +2,14 @@
 .aboutSection {
   background: linear-gradient(to right, #0a0a1f, #1a1a3f);
   color: #ffffff;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Ensure content and image are spaced out */
+  overflow: hidden;
 }
 
 .sectionTitle {
@@ -14,6 +20,17 @@
   background: linear-gradient(45deg, #00ffff, #ff00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.aboutContent {
+  z-index: 1;
+  padding: 2rem;
+  flex: 1;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .aboutContent p {
@@ -28,18 +45,23 @@
   padding: 0.75rem 2rem;
   font-weight: bold;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .learnMoreBtn:hover {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
+.arrowIcon {
+  margin-left: 0.5rem;
+}
+
 .founderImageWrapper {
-  position: relative;
-  height: 400px;
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
+  z-index: 1;
+  padding: 2rem;
+  flex: 1;
+  width: 50%;
   box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
 }
 
@@ -90,7 +112,7 @@
   font-size: 1.1rem;
 }
 
-.infoCard, .serviceCard {
+.infoCard {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: none;
@@ -98,7 +120,7 @@
   transition: all 0.3s ease;
 }
 
-.infoCard:hover, .serviceCard:hover {
+.infoCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
 }
