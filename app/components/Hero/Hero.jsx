@@ -1,49 +1,65 @@
+/* Hero.js */
 "use client";
-import { Container, Row, Col } from 'react-bootstrap'
-import { motion } from 'framer-motion'
-import styles from './Hero.module.css'
 
-export default function Hero() {
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import styles from './Hero.module.css';
+
+const Hero = () => {
   return (
-    <section className={styles.hero}>
-      <Container>
-        <Row className="align-items-center">
-          <Col md={6}>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Where Vision Meets Precision: Welcome to Tera Creations
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Your one-stop digital agency for all your digital marketing, web design, and graphic design needs.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <button className={styles.ctaButton}>Let's Talk</button>
-              <button className={styles.secondaryButton}>Our Projects</button>
-            </motion.div>
-          </Col>
-          <Col md={6}>
-            <motion.img
-              src="/images/hero-image.jpg"
-              alt="Tera Creations at work"
-              className={styles.heroImage}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            />
-          </Col>
-        </Row>
-      </Container>
+    <section className={styles.heroSection}>
+      <motion.div
+        className={styles.backgroundAnimation}
+        animate={{
+          background: [
+            "radial-gradient(circle, var(--color-primary) 0%, transparent 50%)",
+            "radial-gradient(circle, var(--color-secondary) 0%, transparent 50%)",
+            "radial-gradient(circle, var(--color-accent) 0%, transparent 50%)",
+          ],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      />
+      <div className={styles.heroContent}>
+        <motion.div className={styles.heroTag}>
+          <p>🚀 #1 Best Digital Agency</p>
+        </motion.div>
+        <motion.h1
+          className={styles.heroTitle}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Where Vision Meets Precision
+        </motion.h1>
+        <motion.p
+          className={styles.heroSubtitle}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Welcome to Tera Creations, your one-stop digital agency for innovative solutions.
+        </motion.p>
+        <motion.button
+          className={styles.ctaButton}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Let's Talk
+          <div className={styles.buttonGlow}></div>
+        </motion.button>
+      </div>
+      <div className={styles.heroImageContainer}>
+        <Image
+          src="/images/hero.png"
+          alt="Hero Image"
+          width={500}
+          height={500}
+          className={styles.heroImage}
+        />
+      </div>
     </section>
-  )
-}
+  );
+};
+
+export default Hero;
