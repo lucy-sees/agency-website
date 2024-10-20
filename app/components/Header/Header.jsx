@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
@@ -7,32 +8,57 @@ import styles from './Header.module.css';
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
 
+  const navItems = [
+    'Home', 'About Us', 'Services', 'Graphic Design', 
+    'Web Design', 'Blog', 'Contact Us'
+  ];
+
   return (
     <Navbar expand="lg" className={styles.navbar} expanded={expanded}>
-      <Container>
+      <Container className={styles.navContainer}>
         <Navbar.Brand href="#home" className={styles.brand}>
-            <motion.img 
-                src="/images/logo.svg" 
-                alt="Tera Creations" 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-            />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#home" className={styles.navLink}>Home</Nav.Link>
-            <Nav.Link href="#services" className={styles.navLink}>Services</Nav.Link>
-            <Nav.Link href="#projects" className={styles.navLink}>Projects</Nav.Link>
-            <Nav.Link href="#about" className={styles.navLink}>About</Nav.Link>
-            <Nav.Link href="#contact" className={styles.navLink}>Contact</Nav.Link>
-          </Nav>
-          <motion.button 
-            className={styles.ctaButton}
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Started
+            <motion.img
+              src="/images/logo.png"
+              alt="Tera Creations Logo"
+              width={140}
+              height={50}
+              className={styles.logo}
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            />
+          </motion.div>
+        </Navbar.Brand>
+        <Navbar.Toggle 
+          aria-controls="basic-navbar-nav" 
+          onClick={() => setExpanded(expanded ? false : "expanded")} 
+        />
+        <Navbar.Collapse id="basic-navbar-nav" className={styles.navCollapse}>
+          <Nav className={`ms-auto ${styles.nav}`}>
+            {navItems.map((item) => (
+              <Nav.Link 
+                key={item} 
+                href={`#${item.toLowerCase().replace(' ', '-')}`} 
+                className={styles.navLink}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item}
+                </motion.div>
+              </Nav.Link>
+            ))}
+          </Nav>
+          <motion.button
+            className={styles.talkToUsButton}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Talk to us
           </motion.button>
         </Navbar.Collapse>
       </Container>

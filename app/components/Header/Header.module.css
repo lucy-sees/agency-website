@@ -1,29 +1,108 @@
 /* Header.module.css */
 .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 85%;
+  margin: 1rem auto; /* Center the navbar horizontally */
+  padding: 0.5rem 1.5rem;
+  background: rgba(157, 157, 255, 0.3);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border: 1px solid rgba(157, 157, 255, 0.3);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #dc3545;
+}
+
+.navCollapse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .navLink {
-  color: #333;
-  margin: 0 10px;
+  color: var(--color-text) !important;
+  margin: 0 0.5rem;
+  position: relative;
+  overflow: hidden;
   transition: color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
 }
 
 .navLink:hover {
-  color: #dc3545;
+  color: var(--color-primary) !important;
 }
 
-.ctaButton {
-  background-color: #dc3545;
-  color: white;
+.navLink:hover::after {
+  transform: translateX(0);
+}
+
+.talkToUsButton {
+  margin-right: 1rem;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  margin-left: 15px;
+  color: var(--color-background);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  margin-right: 6rem;
+  margin-left: 1rem;
+}
+
+.talkToUsButton:hover {
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    border-radius: 20px;
+  }
+
+  .navLink,
+  .talkToUsButton {
+    margin: 0.5rem 0;
+  }
 }
