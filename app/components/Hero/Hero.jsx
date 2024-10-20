@@ -51,7 +51,7 @@ const Hero = () => {
       </div>
       <div className={styles.heroImageContainer}>
         <Image
-          src="/images/hero.png"
+          src="/images/banner.png"
           alt="Hero Image"
           width={500}
           height={500}
